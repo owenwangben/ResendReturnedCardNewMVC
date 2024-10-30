@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResendReturnedCard", "ResendReturnedCard\ResendReturnedCard.csproj", "{756F9F69-BEC4-429E-BBE7-D44A6D3A65D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{756F9F69-BEC4-429E-BBE7-D44A6D3A65D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{756F9F69-BEC4-429E-BBE7-D44A6D3A65D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{756F9F69-BEC4-429E-BBE7-D44A6D3A65D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{756F9F69-BEC4-429E-BBE7-D44A6D3A65D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A1B847C-E667-47FE-ADA2-C156A469631E}
+	EndGlobalSection
+EndGlobal

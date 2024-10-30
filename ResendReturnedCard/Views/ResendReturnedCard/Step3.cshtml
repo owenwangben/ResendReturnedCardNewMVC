@@ -1,0 +1,141 @@
+﻿@using ResendReturnedCard.Models
+@model IEnumerable<sp_CampaignCallList_Resend_Request_Item>
+
+<div class="wrapper-container">
+    <div class="wrapper">
+        <div class="wrapper-mask"></div>
+        <div class="outer_container">
+            <div class="container no-breadcrumbs">
+                <div class="content transparent step-panel-block">
+                    <div class="step">
+                        <ul class="list-step list-step--gray">
+                            <li class="list-step__item list-step__item--active"><span class="list-step__item-num"></span><span class="list-step__item-title">填寫資料</span></li>
+                            <li class="list-step__item list-step__item--active"><span class="list-step__item-num"></span><span class="list-step__item-title">確認資料</span></li>
+                            <li class="list-step__item list-step__item--current"><span class="list-step__item-num"></span><span class="list-step__item-title">申請結果</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content full-content">
+                    <section class="trans-content">
+                        <table class="new-datatable">
+
+
+                            @if (ViewBag.failMsg != null)
+                            {
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="success">
+                                                <i class="icon-error"></i>
+                                                <p>申請失敗</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="line">
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="reminds">
+                                            <p class="center">請與客服聯絡(02)2528-7776</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+
+                            }
+                            else
+                            {
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="success">
+                                                <i class="icon-tick"></i>
+                                                <p>您已申請成功</p>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            }
+
+
+                        </table>
+                    </section>
+                </div>
+                <div class="content">
+                    <section class="trans-content">
+                        <fieldset class="fieldset-block pink-legend">
+                            <legend>卡片資料</legend>
+                            <div class="confirm-data-block">
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th>
+                                                <p>申請卡片</p>
+                                            </th>
+                                            <td>
+                                                @foreach (var card in Model)
+                                                {<p class="mbhalf">@card.CardName<br />@card.MaskedCarNo</p>
+                                            }
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <p>卡片寄送地址</p>
+                                            </th>
+                                            <td>
+                                                <p>@ViewBag.addres</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </fieldset>
+                    </section>
+                </div>
+                <div class="content transparent">
+                    <section class="carousel">
+                        <div class="splide">
+                            <div class="splide__track">
+                                <ul class="splide__list steplist">
+                                    <li class="splide__slide">
+                                        <a class="splide__link splide__imgbox" href="#" target="_blank">
+                                            <figure class="splide__figure">
+                                                <img class="splide__img" src="../images/banner/18ec202f6e2000002ef1.jpg" alt="世界是一本書，旅遊成就了人生閱讀" />
+                                                <figcaption class="splide__figcaption">世界是一本書，旅遊成就了人生閱讀</figcaption>
+                                            </figure>
+                                        </a>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <a class="splide__link splide__imgbox" href="#" target="_blank">
+                                            <figure class="splide__figure">
+                                                <img class="splide__img" src="../images/banner/18f2c96da6d000002c5a.jpg" alt="我阿母的超強工具" />
+                                                <figcaption class="splide__figcaption">我阿母的超強工具</figcaption>
+                                            </figure>
+                                        </a>
+
+                                    </li>
+                                    <li class="splide__slide">
+                                        <a class="splide__link splide__imgbox" href="#" target="_blank">
+                                            <figure class="splide__figure">
+                                                <img class="splide__img" src="../images/banner/18ec66ca03a00000a2c2.jpg" alt="寵媽必BUY" />
+                                                <figcaption class="splide__figcaption">寵媽必BUY</figcaption>
+                                            </figure>
+                                        </a>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <a class="splide__link splide__imgbox" href="#" target="_blank">
+                                            <figure class="splide__figure">
+                                                <img class="splide__img" src="../images/banner/18ec1fdc80100000457e.jpg" alt="分期刷永豐" />
+                                                <figcaption class="splide__figcaption">分期刷永豐</figcaption>
+                                            </figure>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

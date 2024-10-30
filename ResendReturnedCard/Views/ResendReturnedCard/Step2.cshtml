@@ -1,0 +1,68 @@
+﻿@using ResendReturnedCard.Models
+@model IEnumerable<sp_CampaignCallList_Resend_Request_Item>
+
+@using (Html.BeginForm("Step2", "ResendReturnedCard", FormMethod.Post)) {
+
+<div class="wrapper-container">
+    <div class="wrapper">
+        <div class="wrapper-mask"></div>
+        <div class="outer_container">
+            <div class="container no-breadcrumbs">
+                <div class="content transparent step-panel-block">
+                    <div class="step">
+                        <ul class="list-step list-step--gray">
+                            <li class="list-step__item list-step__item--active"><span class="list-step__item-num"></span><span class="list-step__item-title">填寫資料</span></li>
+                            <li class="list-step__item list-step__item--current"><span class="list-step__item-num"></span><span class="list-step__item-title">確認資料</span></li>
+                            <li class="list-step__item"><span class="list-step__item-num"></span><span class="list-step__item-title">申請結果</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content">
+                    <section class="trans-content">
+                        <fieldset class="fieldset-block pink-legend">
+                            <legend class="nowrap">基本資料<i class="fieldset-block__icon-collapse"></i></legend>
+                            <div class="fieldset-block__body">
+                                <div class="confirm-data-block">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th>
+                                                    <p>申請卡片</p>
+                                                </th>
+                                                <td>
+                                                    @foreach (var card in Model) {
+
+                                                           <p class="mbhalf">@card.CardName<br />@card.MaskedCarNo</p>
+                                                    }
+
+
+                                                    
+
+
+                                                    @* <p class="mbhalf">SPORT悠遊鈦商奶油黃卡(主卡)<br />1234 **** **** 5678</p>
+        <p class="mbhalf">DAWHO現金回饋信用卡(主卡)<br />1234 **** **** 5678</p>*@
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>
+                                                    <p>卡片寄送地址</p>
+                                                </th>
+                                                <td>@ViewBag.addres</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </section>
+                </div>
+                <div class="btn-zone flex-inline-min">
+                    <a class="nbtn" href="@Url.Action("Step1","ResendReturnedCard")">上一步</a>
+                    <input class="nbtn focus" id="next" type="submit" value="送出" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}

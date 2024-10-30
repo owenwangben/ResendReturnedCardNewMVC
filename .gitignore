@@ -1,0 +1,26 @@
+# Ignore build directories
+bin/
+obj/
+
+# Ignore package directories
+packages/
+node_modules/
+
+# Ignore user-specific and system files
+*.user
+*.rsuser
+*.suo
+Thumbs.db
+desktop.ini
+
+# Ignore logs and temporary files
+*.log
+*.tmp
+
+# Ignore publish folders
+Publish/
+dist/
+
+# Ignore Library Manager files
+wwwroot/lib/
+

@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta property="og:title" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:description" content="" />
+    <meta name="author" content="永豐銀行" />
+    <meta name="copyright" content="永豐銀行" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title></title>
+    <link rel="shortcut icon" href="https://mma.sinopac.com/images/favicon.ico" />
+    <link href="@Url.Content("~/Content/css/jpreloader.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/styles.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/splide.min.css")" rel="stylesheet" type="text/css" />
+    <link href="@Url.Content("~/Content/css/carousel.css")" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="logo">
+                    <a href="https://bank.sinopac.com/" title="永豐銀行首頁">
+                        <img class="hidden-min" src="~/Content/images/sinopac-logo.svg" alt="永豐銀行" /><img class="hidden-max" src="~/Content/images/sinopac-logo-min.svg" alt="永豐銀行" />
+                    </a>
+                </div>
+                <h1 class="master-title">信用卡卡片退回重寄申請</h1>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrapper-container">
+        @RenderBody()
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <p>©版權所有 永豐銀行</p>
+                <p class="hidden-min"><a href="https://mma.sinopac.com/Bank/BankFrame.aspx?url=browser/upgrade.html" target="_blank">建議使用之瀏覽器</a>/ 建議解析度1024*768</p>
+            </div>
+            <div class="copyright">
+                <p>
+                    <a href="https://bank.sinopac.com/MMA8/bank/service/service-index.html" target="_blank">客服中心</a><a href="https://mma.sinopac.com/MemberPortal/Member/MmaInfoFrame.aspx?url=channel/other/safe.html" target="_blank">網路安全說明</a><a href="https://bank.sinopac.com/sinopacBT/footer/privacy-statement.html" target="_blank">隱私權保護聲明</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/scripts.securejs" type="text/javascript"></script>
+    <script src="~/Scripts/jquery.min.securejs" type="text/javascript"></script>
+    <script src="~/Scripts/jquery-migrate.min.securejs" type="text/javascript"></script>
+    <script src="~/Scripts/jquery.lightbox_me.securejs" type="text/javascript"></script>
+    <script src="~/Scripts/jpreloader.min.securejs" type="text/javascript"></script>
+</body>
+</html>
